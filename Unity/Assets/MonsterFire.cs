@@ -13,6 +13,7 @@ public class MonsterFire : MonoBehaviour {
     private List<GameObject> prefabs = new List<GameObject>();
     private const int maxObjectNum = 200;
 	public GameObject particle;
+	public GameObject generater;
 //    public RawImage rawImage;
 
     // Use this for initialization
@@ -30,14 +31,14 @@ public class MonsterFire : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.C))
         {
-                        chooseModelInputText("apple");
+                        chooseModelInputText("apple_50");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = true;
 //            image.fillAmount = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-                        chooseModelInputText("gorilla");
+                        chooseModelInputText("gorilla_50");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
             //            image.fillAmount = 0.5f;
         }
@@ -81,14 +82,14 @@ public class MonsterFire : MonoBehaviour {
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
-			float x = Random.Range(-8.0f,8.0f);
-			float y = Random.Range(0,5.0f);
-			float z = Random.Range(-8.0f,8.0f);
+			float x = generater.transform.position.x+Random.Range(-3.0f,3.0f); //横
+			float y = generater.transform.position.y+Random.Range(0,3.0f); //縦
+			float z = generater.transform.position.z+Random.Range(0,5.0f); //奥行き
 
-			temp = PhotonNetwork.Instantiate(pos, new Vector3(x ,y, z) , transform.rotation, 0);
+			temp = PhotonNetwork.Instantiate(pos,new Vector3(x,y,z), transform.rotation, 0);
 
-				            temp.transform.localScale = new Vector3((float)((float)objScale/100.0), (float)((float)objScale / 100.0), (float)((float)objScale / 100.0));
-				particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
+			temp.transform.localScale = new Vector3((float)((float)objScale/100.0), (float)((float)objScale / 100.0), (float)((float)objScale / 100.0));
+			particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
             prefabs.Add(temp);
            // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
             checkObjectNum(num);
