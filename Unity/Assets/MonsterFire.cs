@@ -31,14 +31,14 @@ public class MonsterFire : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.C))
         {
-                        chooseModelInputText("apple_50");
+                        chooseModelInputText("apple:50");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = true;
 //            image.fillAmount = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-                        chooseModelInputText("gorilla_50");
+                        chooseModelInputText("gorilla:50");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
             //            image.fillAmount = 0.5f;
         }
