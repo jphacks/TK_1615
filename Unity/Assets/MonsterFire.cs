@@ -53,7 +53,7 @@ public class MonsterFire : MonoBehaviour {
 		//SwiftClass.swiftStartRecordingMethod ();
 
 		int num = 0;
-		if (message.IndexOf ("_") <= 0) {
+		if (message.IndexOf (":") <= 0) {
 			if (message == "swiftstart") {
 				GameObject.Find ("RawImage").GetComponent<RawImage> ().enabled = true;
 			}
@@ -63,7 +63,7 @@ public class MonsterFire : MonoBehaviour {
 			return;
 		}
 			//string[0]:word, string[1]:value for scale
-			        string[] stArrayData = message.Split('_');
+			        string[] stArrayData = message.Split(':');
 			        int objScale = int.Parse(stArrayData[1]);
 
 			        string pos = "Prefab/";
@@ -82,9 +82,9 @@ public class MonsterFire : MonoBehaviour {
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
-			float x = generater.transform.position.x+Random.Range(-3.0f,3.0f); //横
-			float y = generater.transform.position.y+Random.Range(0,3.0f); //縦
-			float z = generater.transform.position.z+Random.Range(0,5.0f); //奥行き
+			float x = generater.transform.position.x+Random.Range(-1.0f,1.0f); //横
+			float y = generater.transform.position.y+Random.Range(-2.0f,1.0f); //縦
+			float z = generater.transform.position.z+Random.Range(3.0f,5.0f); //奥行き
 
 			temp = PhotonNetwork.Instantiate(pos,new Vector3(x,y,z), transform.rotation, 0);
 
