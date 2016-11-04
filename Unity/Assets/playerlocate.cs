@@ -17,37 +17,45 @@ public class playerlocate : MonoBehaviour {
 		//playerNumはログイン後しばらく0なのでUpdate側で数値の変化をチェック
 
 		if (playerNum == 0) {
-		
+
 			playerObjects = GameObject.FindGameObjectsWithTag ("Player");
 			playerNum = playerObjects.Length;
-			Debug.Log (playerNum);
 
 			if (playerNum == 1) {
-				this.transform.position = new Vector3 (0, 0, 4);
-				float y = 180;
-				this.transform.rotation = Quaternion.Euler (0.0f, y, 0.0f);
-			} else if (playerNum == 2) {
-				this.transform.position = new Vector3 (0, 0, -4);
-				this.transform.rotation = Quaternion.identity;
-			} else if (playerNum == 3) {
-				this.transform.position = new Vector3 (0, 4, 0);
-				this.transform.rotation = Quaternion.identity;
-				float y = -90;
-				this.transform.rotation = Quaternion.Euler (0.0f, y, 0.0f);
-			} else if (playerNum == 4) {
-				this.transform.position = new Vector3 (0, -4, 0);
-				this.transform.rotation = Quaternion.identity;
-				float y = 90;
-				this.transform.rotation = Quaternion.Euler (0.0f, y, 0.0f);
-			} else if (playerNum > 4) {
+				this.transform.position = new Vector3 (0.0f, 1.5f, 5.0f);
+				this.transform.LookAt(new Vector3(0.0f, 1.5f, 0.0f));
+				Debug.Log ("photon login :"+playerNum);
+				Debug.Log ("【Unity】: Start Record");
+				SwiftClass.swiftStartRecordingMethod ();
+			}  else if (playerNum == 2) {
+				this.transform.position = new Vector3 (0.0f, 1.5f, -5.0f);
+				this.transform.LookAt(new Vector3(0.0f, 1.5f, 0.0f));
+				Debug.Log ("photon login :"+playerNum);
+				Debug.Log ("【Unity】: Start Record");
+				SwiftClass.swiftStartRecordingMethod ();
+			}  else if (playerNum == 3) {
+				this.transform.position = new Vector3 (5.0f, 1.5f, 0.0f);
+				this.transform.LookAt(new Vector3(0.0f, 1.5f, 0.0f));
+				Debug.Log ("photon login :"+playerNum);
+				Debug.Log ("【Unity】: Start Record");
+				SwiftClass.swiftStartRecordingMethod ();
+			}  else if (playerNum == 4) {
+				this.transform.position = new Vector3 (-5.0f, 1.5f, 0.0f);
+				this.transform.LookAt(new Vector3(0.0f, 1.5f, 0.0f));
+				Debug.Log ("photon login :"+playerNum);
+				Debug.Log ("【Unity】: Start Record");
+				SwiftClass.swiftStartRecordingMethod ();
+			}  else if (playerNum > 4) {
 				//5人目以降。時間があれば同心円上に並べたい…
-				this.transform.position = new Vector3 (0, Random.Range (-4f, 4f), Random.Range (-4f, 4f));
-				this.transform.rotation = Quaternion.identity;
-				float y = Random.Range (0, 360);
-				this.transform.rotation = Quaternion.Euler (0.0f, y, 0.0f);
+				this.transform.position = new Vector3 (Random.Range (-4.0f, 4.0f), 2, Random.Range (-4.0f, 4.0f));
+				this.transform.LookAt(new Vector3(0.0f, 1.5f, 0.0f));
 			}
-		
 		}
+
+		//MonsterFireでCameracontrallerが飛んでっちゃうの防ぐ
+		Vector3 pos = transform.position;
+		pos.y = 1.5f;
+		transform.position = pos;
 
 	}
 
