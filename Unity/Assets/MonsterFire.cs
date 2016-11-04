@@ -30,16 +30,17 @@ public class MonsterFire : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.C))
         {
-                        chooseModelInputText("apple");
+            chooseModelInputText("apple_50");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = true;
 //            image.fillAmount = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-                        chooseModelInputText("gorilla");
+            Debug.Log("Get key down B");
+            chooseModelInputText("apple_80");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
-            //            image.fillAmount = 0.5f;
+//            image.fillAmount = 0.5f;
         }
 
     }
@@ -76,8 +77,7 @@ public class MonsterFire : MonoBehaviour {
         //GameObject temp = (GameObject)Resources.Load(modelName);
         GameObject temp = (GameObject)Resources.Load(pos);
         if (temp != null)
-        {
-			
+        {	
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
@@ -86,11 +86,10 @@ public class MonsterFire : MonoBehaviour {
 			float z = Random.Range(-8.0f,8.0f);
 
 			temp = PhotonNetwork.Instantiate(pos, new Vector3(x ,y, z) , transform.rotation, 0);
-
-				            temp.transform.localScale = new Vector3((float)((float)objScale/100.0), (float)((float)objScale / 100.0), (float)((float)objScale / 100.0));
-				particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
+	        temp.transform.localScale = new Vector3((float)((float)objScale/1000.0), (float)((float)objScale / 1000.0), (float)((float)objScale / 1000.0));
+			particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
             prefabs.Add(temp);
-           // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
+            // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
             checkObjectNum(num);
         }
     }
