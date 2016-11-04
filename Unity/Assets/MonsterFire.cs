@@ -88,7 +88,7 @@ public class MonsterFire : MonoBehaviour {
 
 			temp = PhotonNetwork.Instantiate(pos,new Vector3(x,y,z), transform.rotation, 0);
 
-			temp.transform.localScale = new Vector3((float)((float)objScale/100.0), (float)((float)objScale / 100.0), (float)((float)objScale / 100.0));
+			temp.transform.localScale = new Vector3((float)((float)objScale/1000.0), (float)((float)objScale / 1000.0), (float)((float)objScale / 1000.0));
 			particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
             prefabs.Add(temp);
            // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
