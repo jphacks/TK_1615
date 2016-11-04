@@ -18,6 +18,7 @@ public class MonsterFire : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Debug.Log("【unity】Get key down C");
         GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
 
     }
@@ -31,14 +32,16 @@ public class MonsterFire : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.C))
         {
-                        chooseModelInputText("apple_50");
+            Debug.Log("【unity】Get key down C");
+            chooseModelInputText("apple_50");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = true;
 //            image.fillAmount = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-                        chooseModelInputText("gorilla_50");
+            Debug.Log("【unity】Get key down B");
+            chooseModelInputText("gorilla_100");
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
             //            image.fillAmount = 0.5f;
         }
@@ -69,7 +72,7 @@ public class MonsterFire : MonoBehaviour {
 			        string pos = "Prefab/";
 			        pos += stArrayData[0];
 
-			        Debug.Log(stArrayData[0]);
+			        Debug.Log("【unity】:"+stArrayData[0]);
 
        // string pos = "Prefab/";
        // pos += message;
@@ -77,8 +80,7 @@ public class MonsterFire : MonoBehaviour {
         //GameObject temp = (GameObject)Resources.Load(modelName);
         GameObject temp = (GameObject)Resources.Load(pos);
         if (temp != null)
-        {
-			
+        {	
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
@@ -86,12 +88,11 @@ public class MonsterFire : MonoBehaviour {
 			float y = generater.transform.position.y+Random.Range(0,3.0f); //縦
 			float z = generater.transform.position.z+Random.Range(0,5.0f); //奥行き
 
-			temp = PhotonNetwork.Instantiate(pos,new Vector3(x,y,z), transform.rotation, 0);
-
-			temp.transform.localScale = new Vector3((float)((float)objScale/1000.0), (float)((float)objScale / 1000.0), (float)((float)objScale / 1000.0));
+			temp = PhotonNetwork.Instantiate(pos, new Vector3(x ,y, z) , transform.rotation, 0);
+	        temp.transform.localScale = new Vector3((float)((float)objScale/1000.0), (float)((float)objScale / 1000.0), (float)((float)objScale / 1000.0));
 			particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
             prefabs.Add(temp);
-           // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
+            // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
             checkObjectNum(num);
         }
     }
