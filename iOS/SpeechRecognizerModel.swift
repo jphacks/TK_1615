@@ -47,7 +47,7 @@ class SpeechRecognizerModel: NSObject{
             self.audioEngine.stop()
             recognitionRequest?.endAudio()
             isStop = true
-            UnitySendMessage("ObjectGenerater", "chooseModelInputText", "swiftstop")
+            UnitySendMessage("Cameracontroller", "chooseModelInputText", "swiftstop")
             print("↑　end swiftStartRecordingMethod\n")
             
         } else {//止まっていたら
@@ -55,7 +55,7 @@ class SpeechRecognizerModel: NSObject{
             
             //音声認識の許可を求める
             SFSpeechRecognizer.requestAuthorization { authStatus in
-
+                
                 OperationQueue.main.addOperation {
                     switch authStatus {
                     case .authorized:
@@ -70,22 +70,22 @@ class SpeechRecognizerModel: NSObject{
                 }
             }
             
-            try! self.Start()
+            //try! self.Start()
             isFirst = true
-            SettingVolume()
+            //SettingVolume()
         }
     }
     
     //音声認識スタート
     func Start() throws{
         
-        if isFirst{
-            isFirst = false
-        }else{
-            SettingVolume()
-        }
+        // if isFirst{//初回起動
+        //     isFirst = false
+        // }else{
+        SettingVolume()
+        //}
         
-        UnitySendMessage("ObjectGenerater", "chooseModelInputText", "swiftstart")
+        UnitySendMessage("Cameracontroller", "chooseModelInputText", "swiftstart")
         print("↓　start swiftStartRecordingMethod\n")
         isStop = false
         
@@ -96,7 +96,7 @@ class SpeechRecognizerModel: NSObject{
         
         //認識するデータの初期配列
         let jpDictionary:[String: String] = EmojiDictionary.sharedInstance.SetUp()
-            
+        
         //実行中であるとき前回のタスクをキャンセル
         if let recognitionTask = recognitionTask {
             recognitionTask.cancel()
@@ -154,13 +154,13 @@ class SpeechRecognizerModel: NSObject{
                         }
                     }
                 }
-
+                
                 print("After SpeechRecognizerResult : \(tmp)\n")
                 
                 isFinal = result.isFinal
                 
                 OperationQueue().addOperation({ () -> Void in
-                
+                    
                     //一致探索
                     for (jpWord,enWord) in jpDictionary{
                         
@@ -169,7 +169,7 @@ class SpeechRecognizerModel: NSObject{
                             
                             print("Swift　【\(jpWord)】 volune : \(self.volume)")
                             //Unityに送信
-                            UnitySendMessage("ObjectGenerater", "chooseModelInputText", "\(enWord)_\(self.volume)")
+                            UnitySendMessage("Cameracontroller", "chooseModelInputText", "\(enWord):\(self.volume)")
                             
                             //何回ワードが出てきたかカウント
                             if countDictionary["\(jpWord)"] == nil{
@@ -186,7 +186,7 @@ class SpeechRecognizerModel: NSObject{
                             if range != nil{
                                 rangeArray.append(range!)
                             }
-
+                            
                         }
                         
                     }
@@ -204,7 +204,7 @@ class SpeechRecognizerModel: NSObject{
                 self.recognitionTask = nil
                 
                 
-                UnitySendMessage("ObjectGenerater", "chooseModelInputText", "swiftstop")
+                UnitySendMessage("Cameracontroller", "chooseModelInputText", "swiftstop")
                 print("↑　end swiftStartRecordingMethod\n")
                 
                 if self.isStop == false{
@@ -233,7 +233,7 @@ class SpeechRecognizerModel: NSObject{
         self.audioEngine.stop()
         recognitionRequest?.endAudio()
         isStop = true
-        UnitySendMessage("ObjectGenerater", "chooseModelInputText", "swiftstop")
+        UnitySendMessage("Cameracontroller", "chooseModelInputText", "swiftstop")
         print("↑　end swiftStartRecordingMethod\n")
     }
     
@@ -316,6 +316,6 @@ class SpeechRecognizerModel: NSObject{
         AudioQueueStop(self.queue, false)
         AudioQueueDispose(self.queue, true)
     }
-
+    
     
 }
