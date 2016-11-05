@@ -82,8 +82,8 @@ public class MonsterFire : MonoBehaviour {
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
-			float x = generater.transform.position.x+Random.Range(-1.0f,1.0f); //横
-			float y = generater.transform.position.y+Random.Range(-2.0f,1.0f); //縦
+			float x = generater.transform.position.x+Random.Range(-0.2f,0.2f); //横
+			float y = generater.transform.position.y+Random.Range(-1.5f,-1.0f); //縦
 			float z = generater.transform.position.z+Random.Range(3.0f,5.0f); //奥行き
 
 			temp = PhotonNetwork.Instantiate(pos,new Vector3(x,y,z), transform.rotation, 0);
