@@ -1,6 +1,6 @@
 # こえもじVR
 
-![こえもじVR](https://github.com/jphacks/TK_1615/blob/master/Image/%E3%81%93%E3%81%88%E3%82%82%E3%81%98VR_logo.png)
+![こえもじVR](https://github.com/jphacks/TK_1615/blob/master/Image/koemojiVR_logo.png)
 
 ## 製品概要
 声を絵文字に変換して相手に伝える オンラインVRアプリケーション
