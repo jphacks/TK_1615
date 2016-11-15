@@ -20,10 +20,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013319454834}
   - 212: {fileID: 212000013698022370}
-  - 114: {fileID: 114000013185931068}
   - 114: {fileID: 114000011554562020}
   - 114: {fileID: 114000010804023282}
   - 114: {fileID: 114000011878093824}
+  - 54: {fileID: 54000011871175190}
+  - 135: {fileID: 135000013381873748}
+  - 114: {fileID: 114000011025769718}
   m_Layer: 0
   m_Name: grinning
   m_TagString: Untagged
@@ -44,6 +46,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &54000011871175190
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012391255212}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000010804023282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,9 +83,28 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114000011554562020}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 16
-  instantiationId: 16
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114000011025769718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012391255212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0, z: 0}
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000011554562020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,21 +128,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
---- !u!114 &114000013185931068
-MonoBehaviour:
+--- !u!135 &135000013381873748
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012391255212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  serializedVersion: 2
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000013698022370
 SpriteRenderer:
   m_ObjectHideFlags: 1
