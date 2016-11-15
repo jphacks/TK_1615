@@ -22,10 +22,10 @@ GameObject:
   - 212: {fileID: 212000014130990530}
   - 114: {fileID: 114000013135495364}
   - 114: {fileID: 114000014266456670}
-  - 114: {fileID: 114000011520189212}
   - 114: {fileID: 114000011174769752}
   - 54: {fileID: 54000012462055002}
   - 135: {fileID: 135000012047639638}
+  - 114: {fileID: 114000013155862938}
   m_Layer: 0
   m_Name: nose
   m_TagString: Untagged
@@ -73,21 +73,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
---- !u!114 &114000011520189212
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011265551538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
 --- !u!114 &114000013135495364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +98,25 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114000013155862938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011265551538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0, z: 0}
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000014266456670
 MonoBehaviour:
   m_ObjectHideFlags: 1

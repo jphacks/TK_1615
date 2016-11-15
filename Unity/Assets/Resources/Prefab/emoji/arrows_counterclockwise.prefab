@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011736280586}
   - 212: {fileID: 212000010252617770}
-  - 114: {fileID: 114000013734613660}
   - 114: {fileID: 114000013142416156}
   - 114: {fileID: 114000011850001410}
   - 114: {fileID: 114000012278180304}
   - 54: {fileID: 54000012527851772}
   - 135: {fileID: 135000012831796188}
+  - 114: {fileID: 114000010861696396}
   m_Layer: 0
   m_Name: arrows_counterclockwise
   m_TagString: Untagged
@@ -61,6 +61,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000010861696396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012129084854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0, z: 0}
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000011850001410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,21 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360340784402a429dbbeb99938cf6dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013734613660
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012129084854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
 --- !u!135 &135000012831796188
 SphereCollider:
   m_ObjectHideFlags: 1

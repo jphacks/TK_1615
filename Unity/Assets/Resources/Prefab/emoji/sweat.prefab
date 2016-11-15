@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000014245813314}
   - 114: {fileID: 114000014072403338}
   - 114: {fileID: 114000013476332134}
-  - 114: {fileID: 114000010440451142}
   - 54: {fileID: 54000011540196828}
   - 135: {fileID: 135000012137131168}
+  - 114: {fileID: 114000012068572462}
   m_Layer: 0
   m_Name: sweat
   m_TagString: Untagged
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010440451142
+--- !u!114 &114000012068572462
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -73,9 +73,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000013476332134
 MonoBehaviour:
   m_ObjectHideFlags: 1

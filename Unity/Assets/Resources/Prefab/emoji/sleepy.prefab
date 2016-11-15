@@ -21,11 +21,11 @@ GameObject:
   - 4: {fileID: 4000013668777850}
   - 212: {fileID: 212000011664371808}
   - 114: {fileID: 114000010899565772}
-  - 114: {fileID: 114000012765731996}
   - 114: {fileID: 114000012201270874}
   - 114: {fileID: 114000010068925678}
   - 54: {fileID: 54000014133005604}
   - 135: {fileID: 135000011098024454}
+  - 114: {fileID: 114000012516870982}
   m_Layer: 0
   m_Name: sleepy
   m_TagString: Untagged
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
---- !u!114 &114000012765731996
+--- !u!114 &114000012516870982
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -121,9 +121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!135 &135000011098024454
 SphereCollider:
   m_ObjectHideFlags: 1

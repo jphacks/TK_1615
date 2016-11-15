@@ -22,10 +22,10 @@ GameObject:
   - 212: {fileID: 212000013780194338}
   - 114: {fileID: 114000010346093010}
   - 114: {fileID: 114000012926324078}
-  - 114: {fileID: 114000013752491980}
   - 114: {fileID: 114000011918087152}
   - 54: {fileID: 54000013225905464}
   - 135: {fileID: 135000013120873812}
+  - 114: {fileID: 114000013962387432}
   m_Layer: 0
   m_Name: person_with_pouting_face
   m_TagString: Untagged
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360340784402a429dbbeb99938cf6dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000013752491980
+--- !u!114 &114000013962387432
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -121,9 +121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!135 &135000013120873812
 SphereCollider:
   m_ObjectHideFlags: 1

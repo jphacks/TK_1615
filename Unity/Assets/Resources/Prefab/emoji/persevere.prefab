@@ -22,10 +22,10 @@ GameObject:
   - 212: {fileID: 212000011646718252}
   - 114: {fileID: 114000011222395004}
   - 114: {fileID: 114000011525456906}
-  - 114: {fileID: 114000010151443982}
   - 114: {fileID: 114000013596568170}
   - 54: {fileID: 54000013081684462}
   - 135: {fileID: 135000012471988150}
+  - 114: {fileID: 114000010066976748}
   m_Layer: 0
   m_Name: persevere
   m_TagString: Untagged
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010151443982
+--- !u!114 &114000010066976748
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -73,9 +73,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000011222395004
 MonoBehaviour:
   m_ObjectHideFlags: 1

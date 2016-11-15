@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000013425598290}
   - 114: {fileID: 114000012168538722}
   - 114: {fileID: 114000013251007888}
-  - 114: {fileID: 114000011805521316}
   - 54: {fileID: 54000010106881694}
   - 135: {fileID: 135000011635767314}
+  - 114: {fileID: 114000011729463996}
   m_Layer: 0
   m_Name: speaker
   m_TagString: Untagged
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000011805521316
+--- !u!114 &114000011729463996
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -73,9 +73,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000012168538722
 MonoBehaviour:
   m_ObjectHideFlags: 1

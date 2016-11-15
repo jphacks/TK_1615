@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000010558360892}
   - 114: {fileID: 114000013252717972}
   - 114: {fileID: 114000012388270144}
-  - 114: {fileID: 114000011611118664}
   - 54: {fileID: 54000014220032018}
   - 135: {fileID: 135000014238951104}
+  - 114: {fileID: 114000011510259756}
   m_Layer: 0
   m_Name: smiley
   m_TagString: Untagged
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
---- !u!114 &114000011611118664
+--- !u!114 &114000011510259756
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,9 +85,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000012388270144
 MonoBehaviour:
   m_ObjectHideFlags: 1

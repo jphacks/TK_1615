@@ -22,10 +22,10 @@ GameObject:
   - 212: {fileID: 212000010192015572}
   - 114: {fileID: 114000010041384742}
   - 114: {fileID: 114000011196666948}
-  - 114: {fileID: 114000010108679794}
   - 114: {fileID: 114000012844831024}
   - 54: {fileID: 54000010992511742}
   - 135: {fileID: 135000014096325020}
+  - 114: {fileID: 114000010263531872}
   m_Layer: 0
   m_Name: no_good
   m_TagString: Untagged
@@ -86,7 +86,7 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114000010108679794
+--- !u!114 &114000010263531872
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,9 +98,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000011196666948
 MonoBehaviour:
   m_ObjectHideFlags: 1

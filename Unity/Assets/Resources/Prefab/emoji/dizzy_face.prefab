@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000011343181002}
   - 114: {fileID: 114000010589084718}
   - 114: {fileID: 114000014201180070}
-  - 114: {fileID: 114000011900558868}
   - 54: {fileID: 54000010847079824}
   - 135: {fileID: 135000011769553520}
+  - 114: {fileID: 114000013366621262}
   m_Layer: 0
   m_Name: dizzy_face
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
---- !u!114 &114000011900558868
+--- !u!114 &114000013366621262
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -110,9 +110,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000014201180070
 MonoBehaviour:
   m_ObjectHideFlags: 1

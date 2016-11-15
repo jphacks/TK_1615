@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000014217714700}
   - 114: {fileID: 114000012344491364}
   - 114: {fileID: 114000011300068270}
-  - 114: {fileID: 114000013397063366}
   - 54: {fileID: 54000010025817492}
   - 135: {fileID: 135000011513628266}
+  - 114: {fileID: 114000013856055790}
   m_Layer: 0
   m_Name: fearful
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114000013397063366
+--- !u!114 &114000013856055790
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,9 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000014217714700
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -22,10 +22,10 @@ GameObject:
   - 212: {fileID: 212000014278635248}
   - 114: {fileID: 114000012453418420}
   - 114: {fileID: 114000012006371658}
-  - 114: {fileID: 114000011229365032}
   - 114: {fileID: 114000012812634320}
   - 54: {fileID: 54000010606210478}
   - 135: {fileID: 135000013104619746}
+  - 114: {fileID: 114000010577459584}
   m_Layer: 0
   m_Name: laughing
   m_TagString: Untagged
@@ -61,7 +61,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000011229365032
+--- !u!114 &114000010577459584
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -73,9 +73,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000012006371658
 MonoBehaviour:
   m_ObjectHideFlags: 1

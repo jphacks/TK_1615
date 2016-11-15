@@ -23,9 +23,9 @@ GameObject:
   - 114: {fileID: 114000013749961828}
   - 114: {fileID: 114000012709392928}
   - 114: {fileID: 114000011758539876}
-  - 114: {fileID: 114000013247812774}
   - 54: {fileID: 54000013849436750}
   - 135: {fileID: 135000012276470424}
+  - 114: {fileID: 114000013251860974}
   m_Layer: 0
   m_Name: bowtie
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114000013247812774
+--- !u!114 &114000013251860974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,9 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000013749961828
 MonoBehaviour:
   m_ObjectHideFlags: 1

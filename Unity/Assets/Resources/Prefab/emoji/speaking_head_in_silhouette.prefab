@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011166387428}
   - 212: {fileID: 212000012481921512}
-  - 114: {fileID: 114000013951373732}
   - 114: {fileID: 114000010553589340}
   - 114: {fileID: 114000013674589186}
   - 114: {fileID: 114000010885695690}
   - 54: {fileID: 54000013504723910}
   - 135: {fileID: 135000010821326090}
+  - 114: {fileID: 114000010688567510}
   m_Layer: 0
   m_Name: speaking_head_in_silhouette
   m_TagString: Untagged
@@ -72,6 +72,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360340784402a429dbbeb99938cf6dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000010688567510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010154707362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0, z: 0}
+  maxValue: 0
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 0
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000010885695690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,21 +128,6 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114000013951373732
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010154707362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
 --- !u!135 &135000010821326090
 SphereCollider:
   m_ObjectHideFlags: 1
