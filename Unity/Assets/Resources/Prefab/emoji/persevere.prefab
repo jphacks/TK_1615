@@ -24,6 +24,8 @@ GameObject:
   - 114: {fileID: 114000011525456906}
   - 114: {fileID: 114000010151443982}
   - 114: {fileID: 114000013596568170}
+  - 54: {fileID: 54000013081684462}
+  - 135: {fileID: 135000012471988150}
   m_Layer: 0
   m_Name: persevere
   m_TagString: Untagged
@@ -44,6 +46,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &54000013081684462
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012181802342}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000010151443982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,8 +98,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114000011525456906}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 17
-  instantiationId: 17
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114000011525456906
 MonoBehaviour:
@@ -107,6 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
+--- !u!135 &135000012471988150
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012181802342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011646718252
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,6 +24,8 @@ GameObject:
   - 114: {fileID: 114000013296644914}
   - 114: {fileID: 114000012967139004}
   - 114: {fileID: 114000010075808276}
+  - 54: {fileID: 54000014251016772}
+  - 135: {fileID: 135000010413515826}
   m_Layer: 0
   m_Name: ok_hand
   m_TagString: Untagged
@@ -44,6 +46,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &54000014251016772
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013151194074}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000010075808276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,9 +121,21 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114000013296644914}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 6
-  instantiationId: 6
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!135 &135000010413515826
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013151194074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011322225038
 SpriteRenderer:
   m_ObjectHideFlags: 1
