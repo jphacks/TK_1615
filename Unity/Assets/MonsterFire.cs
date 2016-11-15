@@ -42,6 +42,12 @@ public class MonsterFire : MonoBehaviour {
             //GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
             //            image.fillAmount = 0.5f;
         }
+		if (Input.GetKeyDown(KeyCode.V))
+		{
+			chooseModelInputText("emoji/joy:80");
+			//GameObject.Find("RawImage").GetComponent<RawImage>().enabled = false;
+			//            image.fillAmount = 0.5f;
+		}
 
     }
 
