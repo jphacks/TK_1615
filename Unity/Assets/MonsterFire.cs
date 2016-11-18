@@ -15,6 +15,7 @@ public class MonsterFire : MonoBehaviour {
 	public GameObject particle;
 	public GameObject generater;
 //    public RawImage rawImage;
+	public static bool saying = false;
 
     // Use this for initialization
     void Start () {
@@ -24,6 +25,12 @@ public class MonsterFire : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+		if (saying == true) {
+			System.Threading.Thread.Sleep (2000);
+			saying = false;
+		}
+
 		if (Input.GetKeyDown (KeyCode.H)) {
 			GameObject bullet = PhotonNetwork.Instantiate ("Bullet", transform.position + new Vector3 (0.0f, 1.0f, 0.0f) + (transform.forward * 0.5f), transform.rotation, 0);
 			bullet.GetComponent<Rigidbody> ().velocity = transform.forward * 15.0f;
@@ -84,7 +91,9 @@ public class MonsterFire : MonoBehaviour {
         GameObject temp = (GameObject)Resources.Load(pos);
         if (temp != null)
         {
-			
+
+			saying = true;
+
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
@@ -99,6 +108,7 @@ public class MonsterFire : MonoBehaviour {
             prefabs.Add(temp);
            // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
             checkObjectNum(num);
+
         }
     }
 		

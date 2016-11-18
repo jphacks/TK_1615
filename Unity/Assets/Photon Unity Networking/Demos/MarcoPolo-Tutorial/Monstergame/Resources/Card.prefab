@@ -124,6 +124,7 @@ GameObject:
   - 33: {fileID: 33000010897461490}
   - 23: {fileID: 23000012324772886}
   - 95: {fileID: 95000012327277368}
+  - 114: {fileID: 114000014185778738}
   m_Layer: 0
   m_Name: Transmitter
   m_TagString: Untagged
@@ -427,6 +428,7 @@ GameObject:
   - 4: {fileID: 4000011616426814}
   - 198: {fileID: 198000012082134958}
   - 199: {fileID: 199000014049825816}
+  - 114: {fileID: 114000014124803242}
   m_Layer: 0
   m_Name: Particle jiggly bubble soapy
   m_TagString: Untagged
@@ -2343,7 +2345,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010945538466}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a05e94640ac5b48d3b7be09f020b8e17, type: 2}
   m_CullingMode: 0
@@ -2466,6 +2468,29 @@ MonoBehaviour:
   player3: {fileID: 1000011110175388, guid: 4dbc989ed1a1449fea578578c5798824, type: 2}
   player4: {fileID: 1000013287130114, guid: 5036374c6e4fc4fb0aa00217e4ca54c3, type: 2}
   player5: {fileID: 1000011664945844, guid: 8bcff158eb16641a9ada4dd2071c333a, type: 2}
+  color: 0
+--- !u!114 &114000014124803242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012873996444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847446fda42fe4982aa3a0daed959b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000014185778738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010945538466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84abfab71af4847c3a1eec310ea8f6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136000011664287740
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2542,7 +2567,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012873996444}
   serializedVersion: 4
-  lengthInSec: 10
+  lengthInSec: 2
   startDelay:
     scalar: 0
     maxCurve:
@@ -2579,7 +2604,7 @@ ParticleSystem:
       m_RotationOrder: 4
     minMaxState: 0
   speed: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0
