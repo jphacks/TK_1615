@@ -67,9 +67,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
+  maxValue: 0
   max: {x: 0, y: 0, z: 0}
+  minValue: 0
   min: {x: 0, y: 0, z: 0}
   isChangingSize: 0
+  speed: 5
+  isStart: 1
 --- !u!114 &114000010905265400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,8 +96,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114000010145150414}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 27
-  instantiationId: 27
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114000011728914964
 MonoBehaviour:
