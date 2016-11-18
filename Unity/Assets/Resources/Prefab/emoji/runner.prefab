@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  maxValue: 0
+  maxValue: 3
   max: {x: 1.2, y: 1.2, z: 1.2}
-  minValue: 0
+  minValue: 2.8
   min: {x: 1, y: 1, z: 1}
   isChangingSize: 1
   speed: 5
