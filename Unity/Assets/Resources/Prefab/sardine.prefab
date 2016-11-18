@@ -384,8 +384,8 @@ GameObject:
   - 95: {fileID: 95000012240908638}
   - 114: {fileID: 114000010766859346}
   - 114: {fileID: 114000012455373500}
-  - 54: {fileID: 54000013517169438}
   - 114: {fileID: 114000012912685952}
+  - 54: {fileID: 54000013116813532}
   m_Layer: 0
   m_Name: sardine
   m_TagString: Untagged
@@ -721,7 +721,7 @@ Transform:
   m_GameObject: {fileID: 1000013254561106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011544212020}
@@ -1091,7 +1091,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010332004466}
   m_RootOrder: 0
---- !u!54 &54000013517169438
+--- !u!54 &54000013116813532
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1101,8 +1101,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
