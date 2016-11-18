@@ -16,6 +16,8 @@ public class MonsterFire : MonoBehaviour {
 	public GameObject generater;
 //    public RawImage rawImage;
 	public static bool saying = false;
+	private float timeOut = 2.0f;
+	private float timeElapsed = 0.0f;
 
     // Use this for initialization
     void Start () {
@@ -27,8 +29,12 @@ public class MonsterFire : MonoBehaviour {
     void Update () {
 
 		if (saying == true) {
-			System.Threading.Thread.Sleep (2000);
-			saying = false;
+			timeElapsed += Time.deltaTime;
+
+			if(timeElapsed >= timeOut) {
+				saying = false;
+				timeElapsed = 0.0f;
+			}
 		}
 
 		if (Input.GetKeyDown (KeyCode.H)) {
