@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38614836, g: 0.4202277, b: 0.4864583, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692498, g: 0.496787, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -449,6 +449,7 @@ GameObject:
   - 92: {fileID: 965776189}
   - 124: {fileID: 965776188}
   - 81: {fileID: 965776187}
+  - 114: {fileID: 965776191}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -531,6 +532,23 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!114 &965776191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965776185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330abc1167dde4e37bf93b31cc1e710a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 1000011664945844, guid: 8bcff158eb16641a9ada4dd2071c333a, type: 2}
+  player2: {fileID: 1000011024802714, guid: 2aa9aade5522b4022a66b967b8f1f6f5, type: 2}
+  player3: {fileID: 1000011110175388, guid: 4dbc989ed1a1449fea578578c5798824, type: 2}
+  player4: {fileID: 1000013287130114, guid: 5036374c6e4fc4fb0aa00217e4ca54c3, type: 2}
+  player5: {fileID: 1000013084694254, guid: e9b83fdb1f6ef477c99365ab6cc59d40, type: 2}
+  color: 0
 --- !u!1 &979322876
 GameObject:
   m_ObjectHideFlags: 0
