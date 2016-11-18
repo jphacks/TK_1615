@@ -81,17 +81,15 @@ public class MonsterFire : MonoBehaviour {
 			}
 			return;
 		}
-			//string[0]:word, string[1]:value for scale
-			        string[] stArrayData = message.Split(':');
-			        int objScale = int.Parse(stArrayData[1]);
+		
+        //string[0]:word, string[1]:value for scale
+	    string[] stArrayData = message.Split(':');
+	    int objScale = int.Parse(stArrayData[1]);
 
-			        string pos = "Prefab/";
-			        pos += stArrayData[0];
+		string pos = "Prefab/";
+		pos += stArrayData[0];
 
-			        Debug.Log(stArrayData[0]);
-
-       // string pos = "Prefab/";
-       // pos += message;
+		Debug.Log("Object Name:"+stArrayData[0]);
 
         //GameObject temp = (GameObject)Resources.Load(modelName);
         GameObject temp = (GameObject)Resources.Load(pos);
@@ -103,11 +101,18 @@ public class MonsterFire : MonoBehaviour {
             num = prefabs.Count;//リストが削除されることを考えていない
 
             //Instantiate(prefabs[num - 1], new Vector3(0f, 1f, 0f), Quaternion.identity);
-			float x = generater.transform.position.x+Random.Range(-0.2f,0.2f); //横
-			float y = generater.transform.position.y+Random.Range(-1.5f,-1.0f); //縦
-			float z = generater.transform.position.z+Random.Range(3.0f,5.0f); //奥行き
+			float x = generater.transform.position.x+Random.Range(-0.1f,0.1f); //横
+			float y = generater.transform.position.y+Random.Range(-1.0f,-0.5f); //縦
+			float z = generater.transform.position.z+Random.Range(2.0f, 3.0f); //奥行き
 
 			temp = PhotonNetwork.Instantiate(pos,new Vector3(x,y,z), transform.rotation, 0);
+
+//            stArrayData = stArrayData[0].Split('/');
+            if(stArrayData[0].IndexOf("/") > 0)
+            {
+                Debug.Log("emoji");
+                objScale *= 2;
+            }
 
 			temp.transform.localScale = new Vector3((float)((float)objScale/100.0), (float)((float)objScale / 100.0), (float)((float)objScale / 100.0));
 			particle = Instantiate (particle, new Vector3(x ,y, z) , transform.rotation) as GameObject;
