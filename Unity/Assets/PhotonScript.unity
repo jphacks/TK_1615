@@ -538,16 +538,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 965776185}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 330abc1167dde4e37bf93b31cc1e710a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 1000011664945844, guid: 8bcff158eb16641a9ada4dd2071c333a, type: 2}
-  player2: {fileID: 1000011024802714, guid: 2aa9aade5522b4022a66b967b8f1f6f5, type: 2}
-  player3: {fileID: 1000011110175388, guid: 4dbc989ed1a1449fea578578c5798824, type: 2}
-  player4: {fileID: 1000013287130114, guid: 5036374c6e4fc4fb0aa00217e4ca54c3, type: 2}
-  player5: {fileID: 1000013084694254, guid: e9b83fdb1f6ef477c99365ab6cc59d40, type: 2}
   color: 0
 --- !u!1 &979322876
 GameObject:
@@ -1511,7 +1506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   str: 
-  particle: {fileID: 100008, guid: 3f1f5afc18eba468c95057673c3b7ee4, type: 2}
   generater: {fileID: 1806530794}
 --- !u!1 &2119278833
 GameObject:
