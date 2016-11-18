@@ -113,12 +113,11 @@ public class MonsterFire : Photon.MonoBehaviour {
                 Debug.Log("emoji");
                 objScale *= 2;
             }
-
 			temp.transform.localScale = new Vector3((float)((float)objScale/100.0), (float)((float)objScale / 100.0), (float)((float)objScale / 100.0));
-			particle = PhotonNetwork.Instantiate ("Holy Blast", new Vector3(x ,y, z) , transform.rotation, 0) as GameObject;
-            prefabs.Add(temp);
-           // temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
-            checkObjectNum(num);
+			GameObject particle = PhotonNetwork.Instantiate ("Holy Blast", new Vector3(x ,y, z) , transform.rotation, 0) /*as GameObject*/;
+			prefabs.Add (particle);
+			prefabs.Add(temp);
+			// temp.GetComponent<Rigidbody>().velocity = transform.forward * 15.0f;
 
         }
     }
