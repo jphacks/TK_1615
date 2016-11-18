@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class playersbodygenerater : MonoBehaviour {
-
+public class playersbodygenerater : Photon.MonoBehaviour {
+	/*
     public GameObject player1;
     public GameObject player2;
     public GameObject player3;
     public GameObject player4;
     public GameObject player5;
+    */
     public bool color = false;
 
     // Use this for initialization
@@ -33,7 +34,7 @@ public class playersbodygenerater : MonoBehaviour {
                 if (Pnum == 1)
                 {
                     // プレハブからインスタンスを生成
-                    GameObject obj = (GameObject)Instantiate(player1, playerpos, playerrot);
+					GameObject obj = PhotonNetwork.Instantiate("BrownBody", playerpos, playerrot, 0);
                     // 作成したオブジェクトを子として登録
                     obj.transform.parent = transform;
                     color = true;
@@ -42,7 +43,7 @@ public class playersbodygenerater : MonoBehaviour {
                 else if (Pnum == 2)
                 {
                     // プレハブからインスタンスを生成
-                    GameObject obj = (GameObject)Instantiate(player2, playerpos, playerrot);
+					GameObject obj = PhotonNetwork.Instantiate("PinkBody", playerpos, playerrot, 0);
                     // 作成したオブジェクトを子として登録
                     obj.transform.parent = transform;
                     color = true;
@@ -51,7 +52,7 @@ public class playersbodygenerater : MonoBehaviour {
                 else if (Pnum == 3)
                 {
                     // プレハブからインスタンスを生成
-                    GameObject obj = (GameObject)Instantiate(player3, playerpos, playerrot);
+					GameObject obj = PhotonNetwork.Instantiate("BlueBody", playerpos, playerrot, 0);
                     // 作成したオブジェクトを子として登録
                     obj.transform.parent = transform;
                     color = true;
@@ -60,7 +61,7 @@ public class playersbodygenerater : MonoBehaviour {
                 else if (Pnum == 4)
                 {
                     // プレハブからインスタンスを生成
-                    GameObject obj = (GameObject)Instantiate(player4, playerpos, playerrot);
+					GameObject obj = PhotonNetwork.Instantiate("YellowBody", playerpos, playerrot, 0);
                     // 作成したオブジェクトを子として登録
                     obj.transform.parent = transform;
                     color = true;
@@ -69,7 +70,7 @@ public class playersbodygenerater : MonoBehaviour {
                 else if (Pnum == 5)
                 {
                     // プレハブからインスタンスを生成
-                    GameObject obj = (GameObject)Instantiate(player5, playerpos, playerrot);
+					GameObject obj = PhotonNetwork.Instantiate("GreenBody", playerpos, playerrot, 0);
                     // 作成したオブジェクトを子として登録
                     obj.transform.parent = transform;
                     color = true;
