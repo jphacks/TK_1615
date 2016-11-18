@@ -281,6 +281,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013703924118}
   - 137: {fileID: 137000010538496566}
+  - 64: {fileID: 64000013486157176}
   m_Layer: 0
   m_Name: Gorilla(1)
   m_TagString: Untagged
@@ -2405,6 +2406,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64000013486157176
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011098857200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300012, guid: 458ee2d52baa7f14da4b5b5f9f26aed1, type: 3}
 --- !u!65 &65000012620648372
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2413,7 +2426,7 @@ BoxCollider:
   m_GameObject: {fileID: 1000010008287902}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.8, z: 2}
   m_Center: {x: 0, y: 1, z: 0.5}
@@ -2463,7 +2476,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010008287902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 360340784402a429dbbeb99938cf6dca, type: 3}
   m_Name: 
