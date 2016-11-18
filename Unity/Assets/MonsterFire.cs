@@ -12,7 +12,7 @@ public class MonsterFire : Photon.MonoBehaviour {
     private int modelNum;
     private List<GameObject> prefabs = new List<GameObject>();
     private const int maxObjectNum = 200;
-	public GameObject particle;
+//	public GameObject particle;
 	public GameObject generater;
 //    public RawImage rawImage;
 	public static bool saying = false;
