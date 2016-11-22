@@ -43,7 +43,7 @@ class SpeechRecognizerModel: NSObject{
     func Setting(){
         
         if audioEngine.isRunning {//動いていたら
-            StopVolume()
+            //StopVolume()
             self.audioEngine.stop()
             recognitionRequest?.endAudio()
             isStop = true
@@ -82,7 +82,7 @@ class SpeechRecognizerModel: NSObject{
         // if isFirst{//初回起動
         //     isFirst = false
         // }else{
-        SettingVolume()
+        //SettingVolume()
         //}
         
         UnitySendMessage("Cameracontroller", "chooseModelInputText", "swiftstart")
@@ -127,6 +127,8 @@ class SpeechRecognizerModel: NSObject{
                 //音声出力結果
                 let realtimeResult:String = "\(result.bestTranscription.formattedString)"
                 print("Before SpeechRecognizerResult : \(realtimeResult)")
+                //Unityに送信
+                UnitySendMessage("TextController", "TextField", "\(realtimeResult)")
                 
                 //もし言葉がリアルタイムに変更したら、rangeがない領域を指定してしまう
                 //前回の文章が含まれていたら、変更なしなのでそのまま置き換え
@@ -169,7 +171,8 @@ class SpeechRecognizerModel: NSObject{
                             
                             print("Swift　【\(jpWord)】 volune : \(self.volume)")
                             //Unityに送信
-                            UnitySendMessage("Cameracontroller", "chooseModelInputText", "\(enWord):\(self.volume)")
+                            //UnitySendMessage("Cameracontroller", "chooseModelInputText", "\(enWord):\(self.volume)")
+                            UnitySendMessage("Cameracontroller", "chooseModelInputText", "\(enWord):\(arc4random_uniform(100))")
                             
                             //何回ワードが出てきたかカウント
                             if countDictionary["\(jpWord)"] == nil{
@@ -196,7 +199,7 @@ class SpeechRecognizerModel: NSObject{
             
             //終了したら
             if isFinal || error != nil {
-                self.StopVolume()
+                //self.StopVolume()
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
                 
@@ -229,7 +232,7 @@ class SpeechRecognizerModel: NSObject{
     
     //ストップ
     func Stop(){
-        StopVolume()
+        //StopVolume()
         self.audioEngine.stop()
         recognitionRequest?.endAudio()
         isStop = true
