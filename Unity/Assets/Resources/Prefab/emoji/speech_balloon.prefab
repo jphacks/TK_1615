@@ -20,10 +20,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012906789552}
   - 212: {fileID: 212000011869272486}
-  - 114: {fileID: 114000010484541742}
   - 114: {fileID: 114000010912531102}
   - 114: {fileID: 114000010477962346}
   - 114: {fileID: 114000013493223546}
+  - 54: {fileID: 54000011878244552}
+  - 135: {fileID: 135000013334029648}
+  - 114: {fileID: 114000014201485814}
   m_Layer: 0
   m_Name: speech_balloon
   m_TagString: Untagged
@@ -44,6 +46,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &54000011878244552
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010480438868}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000010477962346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,24 +83,9 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114000010912531102}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 12
-  instantiationId: 12
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
---- !u!114 &114000010484541742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010480438868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
 --- !u!114 &114000010912531102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +109,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
+--- !u!114 &114000014201485814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010480438868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463ac21d1eec145609148befa4f79f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0, z: 0}
+  maxValue: 3
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 2.8
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
+--- !u!135 &135000013334029648
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010480438868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011869272486
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -23,7 +23,9 @@ GameObject:
   - 114: {fileID: 114000013425598290}
   - 114: {fileID: 114000012168538722}
   - 114: {fileID: 114000013251007888}
-  - 114: {fileID: 114000011805521316}
+  - 54: {fileID: 54000010106881694}
+  - 135: {fileID: 135000011635767314}
+  - 114: {fileID: 114000011729463996}
   m_Layer: 0
   m_Name: speaker
   m_TagString: Untagged
@@ -44,7 +46,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000011805521316
+--- !u!54 &54000010106881694
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010347026498}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114000011729463996
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,9 +73,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 3
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 2.8
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000012168538722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +128,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
+--- !u!135 &135000011635767314
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010347026498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011882551518
 SpriteRenderer:
   m_ObjectHideFlags: 1

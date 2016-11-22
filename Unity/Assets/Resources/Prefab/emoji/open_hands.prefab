@@ -22,8 +22,10 @@ GameObject:
   - 212: {fileID: 212000011823280766}
   - 114: {fileID: 114000013178705788}
   - 114: {fileID: 114000012961575706}
-  - 114: {fileID: 114000010273766226}
   - 114: {fileID: 114000010019781198}
+  - 54: {fileID: 54000010376996854}
+  - 135: {fileID: 135000012286151580}
+  - 114: {fileID: 114000011085091318}
   m_Layer: 0
   m_Name: open_hands
   m_TagString: Untagged
@@ -44,6 +46,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &54000010376996854
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010656742240}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000010019781198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 0}
---- !u!114 &114000010273766226
+--- !u!114 &114000011085091318
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,9 +85,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0, z: 0}
-  max: {x: 0, y: 0, z: 0}
-  min: {x: 0, y: 0, z: 0}
-  isChangingSize: 0
+  maxValue: 3
+  max: {x: 1.2, y: 1.2, z: 1.2}
+  minValue: 2.8
+  min: {x: 1, y: 1, z: 1}
+  isChangingSize: 1
+  speed: 5
+  isStart: 1
 --- !u!114 &114000012961575706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,9 +125,21 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114000012961575706}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 7
-  instantiationId: 7
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!135 &135000012286151580
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010656742240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011823280766
 SpriteRenderer:
   m_ObjectHideFlags: 1
